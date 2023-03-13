@@ -31,9 +31,6 @@ $ npm i
 # Instale o knex globalmente
 $ npm i knex -g
 
-# Altere o password de acordo com sua senha no DB localhost no knexfile
-$ knexfile.js
-
 # Cria todas as tabelas do banco de dados
 $ knex migrate:latest
 
