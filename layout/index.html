@@ -61,7 +61,7 @@
             </div>
 
             <div class="modal-body">
-              <p>Para doar ou receber doações preencha os campos abaixo:</p>
+              <p>Para se cadastrar preencha os campos abaixo:</p>
               <label class="form-label">Seu nome:</label>
               <input id="nome" type="text" class="form-control">
               <label for="modal-email" class="form-label">Seu endereço de email:</label>
@@ -74,54 +74,6 @@
 
             <div class="modal-footer">
               <button class="btn btn-primary" onclick="cadastroRegistration()">Cadastrar</button>
-            </div>
-           
-          </div>
-        </div>
-      </div>
-
-      <!-- FECHA Modal -->
-
-      
-      <!--  Modal donativo -->
-      <div class="modal fade" id="reg-modal-don" tabindex="-1" aria-labelledby="modal-title" arial-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modal-title">Cadastre sua doação</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" arial-label="Fechar"></button>
-            </div>
-
-            <div class="modal-body">
-              <label class="form-label">O que será doado?</label>
-              <input id="produto" type="text" class="form-control">
-              <label class="form-label">Especificações:</label>
-              <input id="especificacao" type="text" class="form-control">
-              <label class="form-label">Local de retirada</label>
-              <input id="retirada" type="text" class="form-control">
-              <label class="form-label">Estado de conservação</label><br>
-              <input onclick="qualidade('Excelente')" id="excelente" type="radio" id="vehicle" name="vehicle" value="Excelente">
-              <label for="vehicle1"> Excelente </label><br>
-              <input onclick="qualidade('Bom')" id="bom" type="radio" id="vehicle" name="vehicle" value="Bom">
-              <label for="vehicle2"> Bom </label><br>
-              <input onclick="qualidade('Regular')" id="regular" type="radio" id="vehicle" name="vehicle" value="Regular">
-              <label for="vehicle3"> Regular </label><br>
-              <input id="ruim" type="radio" id="vehicle" name="vehicle" value="Ruim" onclick="qualidade('Ruim')">
-              <label for="vehicle3"> Ruim </label><br>
-              <br>
-              <form action="upload.php" method="post" enctype="multipart/form-data">
-                <p>Selecione até cinco imagens da sua doação: </p>
-                <input type="file" name="fileToUpload" id="fileToUpload">
-                <input type="file" name="fileToUpload" id="fileToUpload">
-                <input type="file" name="fileToUpload" id="fileToUpload">
-                <input type="file" name="fileToUpload" id="fileToUpload">
-                <input type="file" name="fileToUpload" id="fileToUpload">
-              </form>
-                          
-            </div>
-
-            <div class="modal-footer">
-              <button class="btn btn-primary" onclick="cadastroDonations()">Enviar</button>
             </div>
            
           </div>
@@ -146,13 +98,14 @@
                   <a class="nav-link" href="#produtos">Produtos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="" data-bs-target="#reg-modal-don" class="btn btn-primary" data-bs-toggle="modal">Quero Doar</a>
-                </li>
-                <li class="nav-item">
                   <a class="nav-link" href="#sobre">Sobre</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contato</a>
+                  <a class="nav-link" href="#ajuda">Ajuda</a>
+      
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-target="#reg-modal" class="btn btn-primary" data-bs-toggle="modal">Cadastro</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="" data-bs-target="#reg-modal-login" class="btn btn-primary" data-bs-toggle="modal">Login</a>
@@ -173,8 +126,46 @@
         <div class="separador"></div>
         <div class="destaque">
           <div class="row">
-            <div class="col-sm-8 destaque-home"><img src="./imagens/destaque-home.png" alt="destaque" /></div>
-            <div class="col-sm-4"><h2>COMA BEM PAGANDO POUCO</h2>
+            
+            <!-- abre carrosel -->
+            <div id="carouselExampleCaptions" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./imagens/frutas_verduras-slide.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h3>Frutas e Verduras</h3>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagens/padaria-slide-2.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h3>Padarias</h3>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagens/carnes-slide-3.jpg" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h3>Carnes</h3>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <!-- fecha carrosel -->
+
+            <div class="container-md"><h2>COMA BEM PAGANDO POUCO</h2>
               <p>Muitos produtos perecíveis acabam estragando por estar com sua validade vencida. A Xeparia ajuda a reduzir essa perda auxiliando os estabelecimentos a vender produtos perto de seu vencimento e também os consumidores a economizar com produtos de qualidade. 
               </p>
             </div>
@@ -183,73 +174,116 @@
       </div><!-- fecha container destaque -->
      
 
-      <!-- ABRE SEÇÃO DONATIVOS -->
+      <!-- ABRE SEÇÃO PRODUTOS-->
       <section id="produtos">
         <br />
         <h1>Produtos</h1>
         <div class="row">
           <div class="col-sm-4">
-            <a href="#" target="_blank"><div class="port"><h4 class="titulo-port">Poltrona</h4><img src="./imagens/exemplo-donativo-1.png" alt=""></div></a>
+            <a href="#" target="_blank"><div><h4 class="titulo-port">Leite Piracanjuba</h4><br />
+              <img src="./imagens/leite.jpg" alt="leite" class="port"></div></a>
           </div> 
           <div class="col-sm-4">
-            <a href="#" target="_blank"><div class="port"><h4 class="titulo-port">Cadeiras de Madeira</h4><img src="./imagens/exemplo-donativo-2.png" alt=""></div></a>
+            <a href="#" target="_blank"><div><h4 class="titulo-port">Salgadinho Doritos</h4><img src="./imagens/doritos.jpg" alt="doritos" class="port"></div></a>
           </div>
           <div class="col-sm-4">
-            <a href="#" target="_blank"><div class="port"><h4 class="titulo-port">Armário 2 Portas</h4><img src="./imagens/exemplo-donativo-3.png" alt=""></div></a>
+            <a href="#" target="_blank"><div><h4 class="titulo-port">Espinafre</h4><img src="./imagens/espinafre.jpg" alt="espinafre" class="port"></div></a>
           </div>
         </div>
         <br />
         <div class="row"> 
           <div class="col-sm-4">
-            <a href="#" target="_blank"><div class="port"><h4 class="titulo-port">Cama de Solteiro</h4><img src="./imagens/exemplo-donativo-4.png" alt=""></div></a>
+            <a href="#" target="_blank"><div><h4 class="titulo-port">Bolacha Toddy</h4><img class="port" src="./imagens/bolacha.jpg" class="port" alt="Bolacha"></div></a>
           </div>
           <div class="col-sm-4">
-            <a href="#" target="_blank"><div class="port"><h4 class="titulo-port">Gaveteiro</h4><img src="./imagens/exemplo-donativo-5.png" alt=""></div></a>
+            <a href="#" target="_blank"><div><h4 class="titulo-port">Melancia</h4><img class="port" src="./imagens/melancia.jpg" alt="torta de morango"></div></a>
           </div>
           <div class="col-sm-4">
-            <a href="#" target="_blank"><div class="port"><h4 class="titulo-port">Mesa com Cadeiras</h4><img src="./imagens/exemplo-donativo-6.png" alt=""></div></a>
+            <a href="#" target="_blank"><div><h4 class="titulo-port">Folhado de Queijo</h4><img class="port" src="./imagens/folhado.jpg" alt="folhado" class="port"></div></a>
           </div>
         </div>
-        <h3 style="text-align:right; padding-right: 1.4em;"><strong><a href="#">Ver mais >> </a></strong></h3>
+        <h5 style="text-align:right; padding-right: 1.4em;"><strong><a href="#">Ver mais >> </a></strong></h5>
       </section>
-
-      <h1>Quero Doar</h1>
-      <p>Para fazer sua doação é necessário se cadastrar em nosso sistema e fazer login. Uma vez logado,
-        você poderá acrescentar o seu donativo com fotos e descrição. Nossa equipe validará sua doação e
-        publicará no site. 
-      </p>
-      
-       <!-- Button trigger modal -->     
-       <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-modal">
-        Cadastre-se para receber e doar
-      </button>
-
-        <!-- Button trigger modal -->     
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-modal-don">
-        Quero fazer uma doação
-      </button>
 
       <section id="sobre">
-        <h1>Sobre</h1>
-        <p>Sabe aquela coisa que está parada tomando pó? Será que não está na hora de encaminhar para
-          alguém que dará mais valor? Queremos que tudo que seja reaproveitável não vá parar no lixão. Por
-          isso, a ideia de criar a plataforma, para que pessoas possam doar aquilo que não utilizam mais.
-          <br />
-          Sempre que possível, pedimos que publique a fotografia do objeto e SEMPRE deixe claro as condições
-          em que se encontra. Tudo bem doar quebrado, rasgado, sujo, contanto que a pessoa que vá buscar
-          saiba exatamente o que está indo retirar.
-          <br />
-          Os administradores trabalham voluntariamente pois este grupo não tem fins lucrativos. Somos apenas
-          uma ponte virtual para que as doações sejam possíveis.
-          <br />
-          Pedimos a gentileza de não se comprometerem com retirada caso não possam fazê-lo. Lembrem que
-          estão perdendo o tempo de alguém que está disposto a ajudar. Pessoas que cometam furos em
-          retirada sem justificativa serão excluídas do grupo.</p>
-      </section>
         <br />
+        <h1>Sobre</h1>
+          <p>Nosso aplicativo busca fazer parcerias com padarias e outros comércios, para que, 
+          produtos que se estejam próximos a data de validade e que acabariam sendo descartados no lixo, 
+          possam ir para a mesa dos consumidores. 
+     
+          <br />
+          <br />
+          Alimentos como doces, pães, bolos, entre outros, vendidos por um preço muito mais acessível. 
+          A ideia é que a plataforma conecte padarias e outros comércios a consumidores que residam ou estejam próximos a eles.
+          <br />
+          <br />
+          Os consumidores podem optar por receber os alimentos via delivery de acordo com a taxa de entrega estabelecida pelo comerciante, 
+          ou indo pessoalmente retirar no estabelecimento escolhido e na hora agendada.
+          <br />
+          <br />
+          Com o auxilio da plataforma Xeparia, será possível que os estabelecimentos parceiros consigam reduzir o desperdício de seus alimentos 
+          e com isso reduzam as perdas financeiras que o desperdício acaba provocando.
+          <br />
+          <br />
+          Os usuários poderão optar por alimentos doces, salgados ou mistos, de acordo com o que o estabelecimento fornecer no dia. Não será possível escolher o produto especificamente, apenas as categorias citadas acima, entre doce, salgado ou misto. O estabelecimento então irá separar os alimentos que estiverem disponíveis no dia, 
+          de acordo com a categoria escolhida pelo consumidor.
+          <br />
+          <br />
+          O mais importante para o sucesso da plataforma e do reconhecimento dos estabelecimentos parceiros é que os
+           alimentos fornecidos sejam seguros, de qualidade e que estejam bons para o consumo, por isso, é muito importante 
+           a avaliação do usuário quanto ao estabelecimento e aos produtos fornecidos.
+          </p>
+      </section>
+
+      <section id="ajuda">
+        <div>
+          <br />
+          <h2>Com o que podemos ajudar?</h2>
+          <br />
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Administrar e cancelar compras
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                <p>Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget.Cevadis im ampola pa arma uma pindureta.Interagi no mé, cursus quis, vehicula ac nisi.Manduma pindureta quium dia nois paga.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Devoluções e reembolsos
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget.Cevadis im ampola pa arma uma pindureta.Interagi no mé, cursus quis, vehicula ac nisi.Manduma pindureta quium dia nois paga.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Pergutas frequentes sobre compras
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget.Cevadis im ampola pa arma uma pindureta.Interagi no mé, cursus quis, vehicula ac nisi.Manduma pindureta quium dia nois paga.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> 
         <br />
       <footer>
-        <p>Portfólio criado para Projeto Integrador para a matéria "2202-PROJETO INTEGRADOR: Criação de Minimum viable product do curso de Tecnologia em Sistemas para Internet do <a href="https://ead.senac.br/">Senac</a>. São Paulo, 13/03/2023.</p>
+        <p>Portfólio criado para Projeto Integrador para a matéria "2202-PROJETO INTEGRADOR: Criação de Minimum viable product" do curso de Tecnologia em Sistemas para Internet do <a href="https://ead.senac.br/">Senac</a>. São Paulo, 13/03/2023.</p>
       </footer>
           
     </div> <!-- Fecha Container -->

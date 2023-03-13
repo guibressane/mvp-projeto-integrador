@@ -91,8 +91,8 @@
      width: 600px; 
   }
 
-  .col-sm-4 {
-    padding: 2em;
+  .container-md {
+    padding: 3em;
     color: white;
   
   }
@@ -120,11 +120,12 @@
 
   .port {
     margin: 1.5em 1em;
+    border: #ad0a1f 2px solid;
   }
 
   .titulo-port {
     background-color: #fff;
-    padding: 1em;
+    padding: 0.5em;
     float: left;
     box-shadow: -8px 12px #c42036;
     border: solid 2px #c42036;
