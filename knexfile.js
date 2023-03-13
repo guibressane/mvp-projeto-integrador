@@ -1,11 +1,9 @@
-module.exports = {
-  client: "mysql2",
+module.exports = {  
+  client: 'sqlite3', // or 'better-sqlite3'
   connection: {
-    host: "localhost",
-    user: "root",
-    password: "0000",
-    database: "project",
+    filename: "./db/mydb.sqlite"
   },
+  useNullAsDefault: true,
   migrations: {
     directory: './db/migrations'
   },
