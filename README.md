@@ -2,8 +2,6 @@
 <h1 align="center">SENAC</h1>
 <p align="center">Portfólio criado para Projeto Integrador para a matéria "2202-PROJETO INTEGRADOR: Criação de Minimum viable product" do curso de Tecnologia em Sistemas para Internet do <a href="https://ead.senac.br/">Senac</a>. São Paulo, 13/03/2023.</p>
 
-<p>A aplicação Web desenvolvida tem o intuito de facilitar a troca de doações. Foi feito uma página principal com a descrição do projeto, exibição dos donativos e informações gerais. Temos 3 principais links: Cadastro, Quero Doar e Login. Foi criada a integração em JavaScript para alimentar um banco de dados com as informações dos usuários. Nessa implementação é possível cadastrar/deletar usuários e donativos. No caso de um usuário já ser cadastrado uma mensagem de erro será exibida.</p>
-
 <h2>Integrantes do grupo:
 <ul>
     <li>CARLOS DANIEL RODRIGUES DA COSTA LEAL</li>
