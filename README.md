@@ -14,9 +14,9 @@
 <h4>Referências de pesquisa para execução do projeto:</h4>
           <ul>
           <li><strong>SANTIAGO</strong>, Jefferson. Título: Web Standards. Editora Senac, São Paulo, 2016.</li>
-          <li><strong><a href="https://getbootstrap.com/">Bootstrap</a></strong>, https://getbootstrap.com/ acessado em 5/09/22.</li>
-          <li><strong><a href="https://www.w3schools.com/">W3schools</a></strong>, https://www.w3schools.com/ acessado em 5/09/22.</li>
-          <li><strong>Para baixar este projeto no <a href="https://github.com/guibressane/projetointegrador">Github</a></strong>, https://github.com/guibressane/projetointegrador</li>
+          <li><strong><a href="https://getbootstrap.com/">Bootstrap</a></strong>, https://getbootstrap.com/ acessado em 13/03/23.</li>
+          <li><strong><a href="https://www.w3schools.com/">W3schools</a></strong>, https://www.w3schools.com/ acessado em 13/03/23.</li>
+          <li><strong>Para baixar este projeto no <a href="https://github.com/guibressane/projetointegrador">Github</a></strong>, https://github.com/guibressane/mvp-projeto-integrador</li>
 
 Configurações do banco no arquivo knexfile.js
 
